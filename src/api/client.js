@@ -10,10 +10,11 @@ export const api = axios.create({
   }
 });
 
+// сюда попадёт токен при логине
 export function setAdminToken(token) {
   if (token) {
-    api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    api.defaults.headers.common['x-admin-token'] = token;
   } else {
-    delete api.defaults.headers.common['Authorization'];
+    delete api.defaults.headers.common['x-admin-token'];
   }
 }
