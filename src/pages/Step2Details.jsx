@@ -54,7 +54,7 @@ function Step2Details() {
         },
         {
           headers: {
-            'x-admin-token': import.meta.env.VITE_ADMIN_TOKEN
+            Authorization: `Bearer ${import.meta.env.VITE_ADMIN_TOKEN}`
           }
         }
       );
